@@ -1,0 +1,66 @@
+@use '../abstracts/' as *;
+
+.card {
+    border-radius: 10px;
+    max-width: 340px;
+    overflow: hidden;
+    background: $dark-desaturated-blue;
+
+    @media (min-width: map-get($breakpoints, large)) {
+        display: grid;
+        max-width: 1000px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: none;
+    }
+
+    &__img {
+        position: relative;
+
+    }
+
+    &__img--overlay {
+        background-color: hsla(277, 100%, 35.3%, 0.67);
+        background-blend-mode: multiply;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+    
+    &__details {
+        padding: 2rem;
+
+        @media (min-width: map-get($breakpoints, large)) {
+            grid-area: 1;
+            padding: 9%;
+
+        }
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    &__body {
+        margin-bottom: 2rem;
+    }
+
+    &__list {
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-bottom: 1rem;
+        }
+        h2 {
+            margin-bottom: .2rem;
+        }
+
+        @media (min-width: map-get($breakpoints, large)) {
+            display: flex;
+            // justify-content: space-between;
+            gap: 15%;
+        }
+    }
+
+}

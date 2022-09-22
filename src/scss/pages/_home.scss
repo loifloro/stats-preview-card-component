@@ -1,0 +1,11 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+@use '../abstracts/' as *;
+
+body {
+    background: $very-dark-blue;
+    display: grid;
+    place-items: center;
+}
